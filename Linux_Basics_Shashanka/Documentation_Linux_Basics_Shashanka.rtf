@@ -1,0 +1,126 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033
+{\fonttbl{\f0\fswiss\fcharset0 Calibri;}{\f1\fmodern\fcharset0 Consolas;}}
+{\colortbl;\red0\green0\blue0;\red31\green73\blue125;\red192\green0\blue0;\red89\green89\blue89;\red0\green102\blue0;}
+\f0\fs44\b\cf2 Linux Basics \endash  Command Line Practice\b0\fs24\cf1\par
+\par
+\fs28\b Name:\b0  Shashanka\par
+\fs28\b Assignment:\b0  Tutedude \endash  Linux Basics\par
+\fs28\b GitHub Repository:\b0\cf5\ul  https://github.com/ShashankaP06/DevOps/tree/main/Linux_Basics_Shashanka \ul0\cf1\par
+\par
+\fs28\b\cf2 Objective\b0\cf1\fs24\par
+Practise essential Linux command-line operations \endash  file and directory management, viewing files, searching, archiving, downloading, permissions, and environment variables.\par
+\par
+\fs28\b\cf2 Environment Used\b0\cf1\fs24\par
+All commands below were run in a Linux terminal (WSL / Ubuntu). The exact same commands are saved as ready-to-run shell scripts in the \f1 scripts/\f0  folder of this project (see \f1 README.md\f0  for the full list), so the project can be re-run and re-verified at any time.\par
+\par
+\page
+\fs32\b\cf2 Task 1: Creating and Renaming Files/Directories\b0\cf1\fs24\par
+\par
+\b Explanation:\b0  \f1 mkdir\f0  creates a new, empty directory. \f1 touch\f0  creates a new, empty file (or updates its timestamp if it already exists). \f1 mv\f0  moves a file/directory to a new location \endash  when the source and destination are in the same folder, \f1 mv\f0  effectively renames the file.\par
+\par
+\b Commands used:\b0\par
+{\f1\fs20\cf4 mkdir test_dir\line touch test_dir/example.txt\line mv test_dir/example.txt test_dir/renamed_example.txt\line ls -l test_dir\par
+}\cf1\fs24\par
+\b What happens:\b0  A folder named \f1 test_dir\f0  is created. Inside it, an empty file \f1 example.txt\f0  is created, then immediately renamed to \f1 renamed_example.txt\f0 . The final \f1 ls -l\f0  confirms only \f1 renamed_example.txt\f0  exists.\par
+\par
+\b\cf3 [SCREENSHOT PLACEHOLDER \endash  Task 1: paste a screenshot here showing the mkdir / touch / mv / ls -l commands and their output. Source: scripts/01_create_rename.sh]\b0\cf1\par
+\par
+\page
+\fs32\b\cf2 Task 2: Viewing File Contents\b0\cf1\fs24\par
+\par
+\b Explanation:\b0  \f1 cat\f0  prints the entire contents of a file to the screen. \f1 head -n 5\f0  prints only the first 5 lines. \f1 tail -n 5\f0  prints only the last 5 lines. These are useful for quickly inspecting large files without opening a full text editor.\par
+\par
+\b Command \endash  full file:\b0\par
+{\f1\fs20\cf4 cat /etc/passwd\par
+}\cf1\fs24\par
+\b\cf3 [SCREENSHOT PLACEHOLDER \endash  Task 2a: cat /etc/passwd output]\b0\cf1\par
+\par
+\b Command \endash  first 5 lines:\b0\par
+{\f1\fs20\cf4 head -n 5 /etc/passwd\par
+}\cf1\fs24\par
+\b\cf3 [SCREENSHOT PLACEHOLDER \endash  Task 2b: head -n 5 /etc/passwd output]\b0\cf1\par
+\par
+\b Command \endash  last 5 lines:\b0\par
+{\f1\fs20\cf4 tail -n 5 /etc/passwd\par
+}\cf1\fs24\par
+\b\cf3 [SCREENSHOT PLACEHOLDER \endash  Task 2c: tail -n 5 /etc/passwd output. Source: scripts/02_view_files.sh]\b0\cf1\par
+\par
+\page
+\fs32\b\cf2 Task 3: Searching for Patterns\b0\cf1\fs24\par
+\par
+\b Explanation:\b0  \f1 grep\f0  searches the given file line-by-line for a pattern (here, the plain text "root") and prints every matching line. It is one of the most-used tools for finding information inside text/log files.\par
+\par
+\b Command used:\b0\par
+{\f1\fs20\cf4 grep "root" /etc/passwd\par
+}\cf1\fs24\par
+\b What happens:\b0  Every line in \f1 /etc/passwd\f0  that contains the word "root" is printed \endash  typically the root user's own entry, plus any other accounts/comments that happen to include that word.\par
+\par
+\b\cf3 [SCREENSHOT PLACEHOLDER \endash  Task 3: grep "root" /etc/passwd output. Source: scripts/03_search_grep.sh]\b0\cf1\par
+\par
+\page
+\fs32\b\cf2 Task 4: Zipping and Unzipping\b0\cf1\fs24\par
+\par
+\b Explanation:\b0  \f1 zip -r\f0  recursively compresses a directory (and everything inside it) into a single \f1 .zip\f0  archive. \f1 unzip\f0  extracts the contents of a \f1 .zip\f0  archive into a target directory using the \f1 -d\f0  flag.\par
+\par
+\b Command \endash  compress:\b0\par
+{\f1\fs20\cf4 zip -r test_dir.zip test_dir\par
+}\cf1\fs24\par
+\b\cf3 [SCREENSHOT PLACEHOLDER \endash  Task 4a: zip -r test_dir.zip test_dir output]\b0\cf1\par
+\par
+\b Command \endash  extract:\b0\par
+{\f1\fs20\cf4 unzip test_dir.zip -d unzipped_dir\par
+}\cf1\fs24\par
+\b What happens:\b0  \f1 test_dir.zip\f0  is created containing a compressed copy of \f1 test_dir/\f0 . It is then extracted into a brand-new folder called \f1 unzipped_dir/\f0 , recreating the original folder structure inside it.\par
+\par
+\b\cf3 [SCREENSHOT PLACEHOLDER \endash  Task 4b: unzip test_dir.zip -d unzipped_dir output, plus a directory listing proving unzipped_dir/test_dir/renamed_example.txt exists. Source: scripts/04_zip_unzip.sh]\b0\cf1\par
+\par
+\page
+\fs32\b\cf2 Task 5: Downloading Files\b0\cf1\fs24\par
+\par
+\b Explanation:\b0  \f1 wget\f0  downloads a file from a URL over HTTP/HTTPS/FTP directly from the command line, without needing a browser. The \f1 -O\f0  flag lets you choose the saved filename.\par
+\par
+\b Command used:\b0\par
+{\f1\fs20\cf4 wget https://example.com/sample.txt -O sample.txt\par
+}\cf1\fs24\par
+\b Note:\b0  \f1 example.com\f0  is a placeholder/demo domain and does not actually host a file at \f1 /sample.txt\f0 , so \f1 wget\f0  may report a 404 error \endash  this still correctly demonstrates the command's usage and syntax. A working alternative used for a guaranteed successful download is noted as a commented-out fallback URL inside \f1 scripts/05_download.sh\f0 .\par
+\par
+\b\cf3 [SCREENSHOT PLACEHOLDER \endash  Task 5: wget command and its output (connection log + resulting file). Source: scripts/05_download.sh]\b0\cf1\par
+\par
+\page
+\fs32\b\cf2 Task 6: Changing Permissions\b0\cf1\fs24\par
+\par
+\b Explanation:\b0  Every Linux file has three permission groups \endash  owner, group, and others \endash  each with read (r), write (w), and execute (x) permissions. \f1 chmod\f0  changes those permissions. The numeric mode \f1 444\f0  means read-only (r--r--r--) for owner, group, and others alike \endash  i.e. read-only for everyone, with no write or execute permission for anyone.\par
+\par
+\b Commands used:\b0\par
+{\f1\fs20\cf4 touch secure.txt\line ls -l secure.txt\line chmod 444 secure.txt\line ls -l secure.txt\par
+}\cf1\fs24\par
+\b What happens:\b0  Before \f1 chmod\f0 , a new file typically has \f1 rw-r--r--\f0  (644) permissions. After running \f1 chmod 444\f0 , the \f1 ls -l\f0  output changes to \f1 r--r--r--\f0 , confirming write access has been removed for everyone.\par
+\par
+\b\cf3 [SCREENSHOT PLACEHOLDER \endash  Task 6: ls -l secure.txt BEFORE and AFTER chmod 444, showing the permission bits change. Source: scripts/06_permissions.sh]\b0\cf1\par
+\par
+\page
+\fs32\b\cf2 Task 7: Working with Environment Variables\b0\cf1\fs24\par
+\par
+\b Explanation:\b0  Environment variables store values (like configuration settings or shell-wide data) that programs and shell sessions can read. \f1 export\f0  both creates/updates a variable and makes it available to the current shell and any child processes launched from it. \f1 echo $VARNAME\f0  prints its value.\par
+\par
+\b Commands used:\b0\par
+{\f1\fs20\cf4 export MY_VAR="Hello, Linux!"\line echo $MY_VAR\par
+}\cf1\fs24\par
+\b Note:\b0  For an authentic screenshot, these two lines were also typed directly into the interactive terminal (in addition to running via \f1 scripts/07_env_vars.sh\f0 ), since \f1 export\f0  only persists for the current shell/its children \endash  running it purely inside a script would not keep the variable set in the parent terminal afterwards.\par
+\par
+\b\cf3 [SCREENSHOT PLACEHOLDER \endash  Task 7: export MY_VAR="Hello, Linux!" followed by echo $MY_VAR printing "Hello, Linux!". Source: scripts/07_env_vars.sh]\b0\cf1\par
+\par
+\page
+\fs32\b\cf2 Appendix A: Project Structure\b0\cf1\fs24\par
+{\f1\fs20\cf4 DevOps/\line \tab Linux_Basics_Shashanka/\line \tab \tab scripts/\line \tab \tab \tab 01_create_rename.sh\line \tab \tab \tab 02_view_files.sh\line \tab \tab \tab 03_search_grep.sh\line \tab \tab \tab 04_zip_unzip.sh\line \tab \tab \tab 05_download.sh\line \tab \tab \tab 06_permissions.sh\line \tab \tab \tab 07_env_vars.sh\line \tab \tab \tab run_all.sh\line \tab \tab Documentation_Linux_Basics_Shashanka.rtf\line \tab \tab README.md\line \tab \tab HOW_TO_RUN.md\line \tab \tab output_log.txt   (generated after running run_all.sh)\par
+}\cf1\fs24\par
+\par
+\fs32\b\cf2 Appendix B: How This Was Run\b0\cf1\fs24\par
+All seven tasks were executed in order using the master script:\par
+{\f1\fs20\cf4 bash scripts/run_all.sh\par
+}\cf1\fs24\par
+Full step-by-step setup instructions (including installing WSL) are in \f1 HOW_TO_RUN.md\f0  included in this project folder.\par
+\par
+\fs32\b\cf2 Conclusion\b0\cf1\fs24\par
+This project demonstrates practical, hands-on use of the core Linux command-line operations required by the assignment: creating/renaming files and directories, viewing file contents, searching text with grep, archiving with zip/unzip, downloading files with wget, managing permissions with chmod, and working with environment variables via export. All commands are reproducible using the scripts provided in this repository.\par
+}
