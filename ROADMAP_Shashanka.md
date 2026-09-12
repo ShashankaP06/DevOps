@@ -5,7 +5,7 @@
 **Pace:** ~2-5 hrs/week (realistic, sustainable pace — no burnout plan)
 **Cloud focus:** AWS
 **Context:** Built alongside the Tutedude internship track — Tutedude modules
-(like `Linux_Basics_Shashanka`) slot into this roadmap as they're assigned;
+(like `01_Linux_Basics_Shashanka`) slot into this roadmap as they're assigned;
 gaps are filled with the self-study modules below.
 
 ## Why you have a head start
@@ -34,7 +34,7 @@ time on the genuinely new stuff (containers, orchestration, IaC, cloud).
 
 | Phase | Topic | Folder | Est. Weeks |
 |---|---|---|---|
-| 1 | Linux fundamentals | `Linux_Basics_Shashanka/` | Done ✅ |
+| 1 | Linux fundamentals | `01_Linux_Basics_Shashanka/` | Done ✅ |
 | 2 | Git & GitHub (beyond basics) | `02_Git_Advanced_Shashanka/` | 3-4 |
 | 3 | Bash & Python scripting for automation | `03_Bash_Python_Scripting_Shashanka/` | 4 |
 | 4 | Docker & containers | `04_Docker_Basics_Shashanka/` | 5-6 |

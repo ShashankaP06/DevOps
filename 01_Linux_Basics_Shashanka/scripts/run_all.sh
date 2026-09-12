@@ -2,7 +2,7 @@
 # =====================================================================
 # MASTER SCRIPT - runs every task in order and saves a full transcript.
 #
-# Usage (from a Linux/WSL terminal, inside the Linux_Basics_Shashanka
+# Usage (from a Linux/WSL terminal, inside the 01_Linux_Basics_Shashanka
 # folder):
 #
 #   bash scripts/run_all.sh

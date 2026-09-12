@@ -10,7 +10,7 @@ plan, phase-by-phase, with resources and checklists.
 
 | Folder | Topic | Status |
 |---|---|---|
-| [`Linux_Basics_Shashanka/`](./Linux_Basics_Shashanka) | Linux CLI fundamentals | ✅ Done |
+| [`01_Linux_Basics_Shashanka/`](./01_Linux_Basics_Shashanka) | Linux CLI fundamentals | ✅ Done |
 | [`02_Git_Advanced_Shashanka/`](./02_Git_Advanced_Shashanka) | Git & GitHub beyond basics | 🔲 Not started |
 | [`03_Bash_Python_Scripting_Shashanka/`](./03_Bash_Python_Scripting_Shashanka) | Automation scripting | 🔲 Not started |
 | [`04_Docker_Basics_Shashanka/`](./04_Docker_Basics_Shashanka) | Docker & containers | 🔲 Not started |

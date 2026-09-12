@@ -1,16 +1,16 @@
-# Linux_Basics_Shashanka
+# 01 — Linux Basics — Shashanka
 
 Practice project covering essential Linux command-line operations: file/directory
 management, viewing files, searching, archiving, downloading, permissions, and
 environment variables. Built for the Tutedude Linux Basics assignment.
 
 This folder lives inside the [`DevOps`](https://github.com/ShashankaP06/DevOps)
-repository, at `DevOps/Linux_Basics_Shashanka`.
+repository, at `DevOps/01_Linux_Basics_Shashanka`.
 
 ## Project Structure
 
 ```
-Linux_Basics_Shashanka/
+01_Linux_Basics_Shashanka/
 ├── scripts/
 │   ├── 01_create_rename.sh   # Task 1: mkdir, touch, mv
 │   ├── 02_view_files.sh      # Task 2: cat, head, tail
@@ -53,4 +53,4 @@ Shashanka
 
 ## GitHub Repository
 
-https://github.com/ShashankaP06/DevOps/tree/main/Linux_Basics_Shashanka
+https://github.com/ShashankaP06/DevOps/tree/main/01_Linux_Basics_Shashanka

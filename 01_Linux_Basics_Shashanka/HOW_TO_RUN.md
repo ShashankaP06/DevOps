@@ -27,7 +27,7 @@ Your Windows files are reachable from inside WSL under `/mnt/c/...`.
 This project now lives inside the `DevOps` repo on your Desktop:
 
 ```bash
-cd /mnt/c/Users/VPALLSH/Desktop/DevOps/Linux_Basics_Shashanka
+cd /mnt/c/Users/VPALLSH/Desktop/DevOps/01_Linux_Basics_Shashanka
 ls
 ```
 
@@ -81,7 +81,7 @@ WSL:
 
 ```bash
 cd /mnt/c/Users/VPALLSH/Desktop/DevOps
-git add Linux_Basics_Shashanka
+git add 01_Linux_Basics_Shashanka
 git commit -m "Add screenshots to Linux Basics documentation"
 git push
 ```
@@ -92,12 +92,14 @@ git push
 
 You do **not** need Linux for this — do it directly in Windows:
 
-1. Right-click the `Linux_Basics_Shashanka` folder (inside `Desktop\DevOps`).
+1. Right-click the `01_Linux_Basics_Shashanka` folder (inside `Desktop\DevOps`).
 2. Choose **Send to > Compressed (zipped) folder**.
-3. This creates `Linux_Basics_Shashanka.zip` right next to it.
+3. This creates `01_Linux_Basics_Shashanka.zip` right next to it. If the
+   submission portal specifically wants it named `Linux_Basics_Shashanka.zip`,
+   just rename the zip after creating it.
 4. Double check the zip contains: `scripts/`, `README.md`, `HOW_TO_RUN.md`,
    `Documentation_Linux_Basics_Shashanka.rtf`, and (after you run the script)
    `output_log.txt`, `test_dir/`, `test_dir.zip`, `unzipped_dir/`,
    `sample.txt`, `secure.txt`.
 5. GitHub repository link for the submission portal:
-   https://github.com/ShashankaP06/DevOps/tree/main/Linux_Basics_Shashanka
+   https://github.com/ShashankaP06/DevOps/tree/main/01_Linux_Basics_Shashanka
