@@ -1,0 +1,5 @@
+# Force Unix line endings (LF) for shell scripts, regardless of the local
+# git autocrlf setting. Without this, Windows git can silently convert them
+# to CRLF on checkout, which breaks execution in WSL/Linux (Bash chokes on
+# the trailing \r on every line).
+*.sh text eol=lf
