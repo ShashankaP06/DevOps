@@ -107,7 +107,7 @@ Fill this in as you work through `LAB_GUIDE.md`.
 
 - This module's evidence and notes are being submitted through a real feature
   branch and GitHub pull request into `main`.
-- PR link: added after the pull request is created.
+- PR link: https://github.com/ShashankaP06/DevOps/pull/2
 - PR description: summarizes Labs 1-4, evidence files, and the isolated
   practice-repository approach.
 
