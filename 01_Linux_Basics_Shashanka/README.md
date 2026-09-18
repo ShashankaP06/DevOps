@@ -7,6 +7,12 @@ environment variables. Built for the Tutedude Linux Basics assignment.
 This folder lives inside the [`DevOps`](https://github.com/ShashankaP06/DevOps)
 repository, at `DevOps/01_Linux_Basics_Shashanka`.
 
+## Interview Preparation
+
+See [`LINUX_INTERVIEW_GUIDE.md`](./LINUX_INTERVIEW_GUIDE.md) for Linux
+administration, commands, troubleshooting scenarios, security, scripting, and
+DevOps interview answers.
+
 ## Project Structure
 
 ```
