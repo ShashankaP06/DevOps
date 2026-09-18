@@ -1,0 +1,10 @@
+LAB 2 - AFTER INTERACTIVE REBASE
+49c3fcc Add complete rebase practice feature
+ba6626a Add rebase practice baseline
+
+FINAL FILE
+Git rebase practice
+Step 1: create feature
+Step 2: add validation
+Step 3: add error handling
+Step 4: complete feature

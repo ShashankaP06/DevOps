@@ -1,0 +1,13 @@
+* 69a119b Release v7
+* ce1e5d2 Release v6
+* 759cd1f Release v5 introduces regression
+* b26aebc Release v4
+* 68024e0 Release v3
+* 4429360 Release v2
+* 3e4c670 Release v1
+| * 7b96a0d Add recoverable file
+| * fa092dd Add reusable deployment note
+|/  
+| * 49c3fcc Add complete rebase practice feature
+|/  
+* ba6626a Add rebase practice baseline

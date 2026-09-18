@@ -1,0 +1,26 @@
+LAB 4 - GIT BISECT
+Known good: 3e4c6704b7efee2de7bb24a0e02accb36139493d
+Current bad: 69a119bc297daec5946f4e5387de298e57060400
+Bisecting: 2 revisions left to test after this (roughly 2 steps)
+[b26aebc9f834d3f61c5ade2e52f5ffe225e20d8f] Release v4
+running '/tmp/test-not-broken.sh'
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[ce1e5d29cb79c4505b80d989c8b046aee00482a7] Release v6
+running '/tmp/test-not-broken.sh'
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[759cd1f0d2c8a102d55f70f86ae8421af4dc37fc] Release v5 introduces regression
+running '/tmp/test-not-broken.sh'
+759cd1f0d2c8a102d55f70f86ae8421af4dc37fc is the first bad commit
+commit 759cd1f0d2c8a102d55f70f86ae8421af4dc37fc
+Author: Shashanka <shashankapalla10@gmail.com>
+Date:   Fri Sep 18 17:09:54 2026 +0000
+
+    Release v5 introduces regression
+
+ app.txt | 1 +
+ 1 file changed, 1 insertion(+)
+bisect found first bad commit
+Expected first bad commit: 759cd1f0d2c8a102d55f70f86ae8421af4dc37fc
+759cd1f Release v5 introduces regression
+ app.txt | 1 +
+ 1 file changed, 1 insertion(+)

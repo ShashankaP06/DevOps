@@ -35,7 +35,7 @@ time on the genuinely new stuff (containers, orchestration, IaC, cloud).
 | Phase | Topic | Folder | Est. Weeks |
 |---|---|---|---|
 | 1 | Linux fundamentals | `01_Linux_Basics_Shashanka/` | Done ✅ |
-| 2 | Git & GitHub (beyond basics) | `02_Git_Advanced_Shashanka/` | 3-4 |
+| 2 | Git & GitHub (beyond basics) | `02_Git_Advanced_Shashanka/` | In review 🟡 |
 | 3 | Bash & Python scripting for automation | `03_Bash_Python_Scripting_Shashanka/` | 4 |
 | 4 | Docker & containers | `04_Docker_Basics_Shashanka/` | 5-6 |
 | 5 | CI/CD pipelines as code | `05_CICD_Pipelines_Shashanka/` | 5-6 |
