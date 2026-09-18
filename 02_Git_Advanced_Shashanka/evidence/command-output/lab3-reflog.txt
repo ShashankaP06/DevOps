@@ -1,0 +1,13 @@
+LAB 3C - REFLOG RECOVERY
+Commit removed from branch: 7b96a0dd1ad71ebc838865c51a7162e028055459
+fa092dd HEAD@{0}: reset: moving to HEAD~1
+7b96a0d HEAD@{1}: commit: Add recoverable file
+fa092dd HEAD@{2}: cherry-pick: Add reusable deployment note
+ba6626a HEAD@{3}: checkout: moving from cherry-source to lab3-practice
+fa092dd HEAD@{4}: commit: Add reusable deployment note
+HEAD is now at 7b96a0d Add recoverable file
+Recovered commit:
+7b96a0d Add recoverable file
+fa092dd Add reusable deployment note
+ba6626a Add rebase practice baseline
+recoverable content

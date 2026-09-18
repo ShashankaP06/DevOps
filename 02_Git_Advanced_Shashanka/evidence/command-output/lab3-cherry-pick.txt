@@ -1,0 +1,8 @@
+LAB 3B - CHERRY-PICK
+Source commit: fa092dd148563e9bf95647369a41f282039418ab
+[lab3-practice fa092dd] Add reusable deployment note
+ Date: Fri Sep 18 17:09:54 2026 +0000
+ 1 file changed, 1 insertion(+)
+ create mode 100644 cherry.txt
+fa092dd Add reusable deployment note
+ba6626a Add rebase practice baseline

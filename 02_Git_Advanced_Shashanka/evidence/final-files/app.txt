@@ -1,0 +1,7 @@
+version 1: healthy
+version 2: healthy
+version 3: healthy
+version 4: healthy
+BROKEN
+version 6: additional work
+version 7: additional work

@@ -1,7 +1,7 @@
 # 02 — Git & GitHub Beyond Basics
 
 **Est. time:** 3-4 weeks @ 2-5 hrs/week
-**Status:** 🔲 Not started
+**Status:** 🟡 Labs complete — pull request pending
 
 ## Why this matters for you
 
@@ -11,15 +11,15 @@ pull requests — all daily DevOps skills.
 
 ## Topics Checklist
 
-- [ ] Branching strategies (Git Flow, trunk-based development, feature branches)
-- [ ] Rebasing vs merging — when to use which
-- [ ] Resolving merge conflicts confidently (not just accepting a side blindly)
-- [ ] Interactive rebase (`git rebase -i`) to clean up commit history
-- [ ] `git bisect` to find a breaking commit
-- [ ] `git stash`, `git cherry-pick`, `git reflog` (recovering "lost" commits)
-- [ ] Writing good commit messages / PR descriptions
+- [x] Branching strategies (feature branches practiced; Git Flow and trunk-based reviewed)
+- [x] Rebasing vs merging — when to use which
+- [x] Resolving merge conflicts confidently (not just accepting a side blindly)
+- [x] Interactive rebase (`git rebase -i`) to clean up commit history
+- [x] `git bisect` to find a breaking commit
+- [x] `git stash`, `git cherry-pick`, `git reflog` (recovering "lost" commits)
+- [x] Writing good commit messages / PR descriptions
 - [ ] Protected branches, required reviews, CODEOWNERS
-- [ ] Semantic versioning + git tags for releases (you likely know this already)
+- [x] Semantic versioning + git tags for releases (concept reviewed)
 
 ## Free Resources
 
@@ -29,11 +29,16 @@ pull requests — all daily DevOps skills.
 
 ## Hands-on Mini Project
 
-Create a small repo (or use this one) and deliberately:
+The exercises were run in an independent WSL repository at
+`~/git-advanced-practice`. Genuine command output and final files are stored in
+`evidence/` so they can be reviewed on GitHub without nesting a repository.
+
+Completed exercises:
 1. Create two branches that edit the same line of a file — merge them and
    practice resolving the conflict manually.
 2. Make 4-5 messy commits, then `git rebase -i` to squash/reword them into a
    clean history.
-3. Open a PR to yourself (or a friend) and practice a code review.
+3. Practice stash, cherry-pick, reflog recovery, and automated `git bisect`.
+4. Open a real PR for the completed module evidence.
 
-Document what you did in a `NOTES.md` in this folder, with commands used.
+See `NOTES.md` for the walkthrough and `LAB_GUIDE.md` for the lab instructions.

@@ -1,0 +1,5 @@
+Git rebase practice
+Step 1: create feature
+Step 2: add validation
+Step 3: add error handling
+Step 4: complete feature

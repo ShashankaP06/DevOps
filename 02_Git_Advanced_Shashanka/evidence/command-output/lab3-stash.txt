@@ -1,0 +1,16 @@
+LAB 3A - STASH
+Before stash:
+ M notes.txt
+Saved working directory and index state On lab3-practice: lab3 temporary work
+After stash:
+stash@{0}: On lab3-practice: lab3 temporary work
+On branch lab3-practice
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   notes.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (7dc9fa8451b09a44f927ee467645bb598dd5b6a5)
+After stash pop:
+ M notes.txt
