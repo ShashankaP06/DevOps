@@ -1,7 +1,7 @@
 # 02 — Git & GitHub Beyond Basics
 
 **Est. time:** 3-4 weeks @ 2-5 hrs/week
-**Status:** 🟡 Labs complete — pull request pending
+**Status:** ✅ Core module complete
 
 ## Interview Preparation
 
