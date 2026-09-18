@@ -3,6 +3,12 @@
 **Est. time:** 3-4 weeks @ 2-5 hrs/week
 **Status:** 🟡 Labs complete — pull request pending
 
+## Interview Preparation
+
+See [`GIT_INTERVIEW_GUIDE.md`](./GIT_INTERVIEW_GUIDE.md) for Git concepts,
+commands, troubleshooting scenarios, and interview answers from fundamentals
+through advanced DevOps workflows.
+
 ## Why this matters for you
 
 You already use Git for release tagging/versioning. This module fills the
