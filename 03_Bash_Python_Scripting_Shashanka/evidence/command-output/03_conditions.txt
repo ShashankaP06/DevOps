@@ -1,0 +1,23 @@
+﻿HEALTHY CASE
+Hello, Shashanka!
+Disk usage received: 50%
+Number of arguments: 2
+OK: Disk usage is healthy.
+
+WARNING CASE
+Hello, Shashanka!
+Disk usage received: 80%
+Number of arguments: 2
+WARNING: Disk usage is increasing.
+
+CRITICAL CASE
+Hello, Shashanka!
+Disk usage received: 95%
+Number of arguments: 2
+CRITICAL: Disk usage is too high.
+
+INVALID INPUT CASE
+Hello, Shashanka!
+Disk usage received: high%
+Number of arguments: 2
+ERROR: Disk usage must be a number.

@@ -1,0 +1,13 @@
+﻿Hello, Shashanka Palla!
+Checking 3 disk-usage values...
+Checking disk usage: 45%
+OK: Disk usage is healthy.
+---
+Checking disk usage: 80%
+WARNING: Disk usage is increasing.
+---
+Checking disk usage: 95%
+CRITICAL: Disk usage is too high.
+---
+All disk checks completed.
+Exit code: 1
