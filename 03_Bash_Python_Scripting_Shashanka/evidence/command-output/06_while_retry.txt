@@ -1,0 +1,20 @@
+﻿SUCCESSFUL RETRY CASE
+Hello, Shashanka!
+Maximum attempts: 3
+Attempt 1: checking service...
+WARNING: Service is not ready.
+Attempt 2: checking service...
+WARNING: Service is not ready.
+Attempt 3: checking service...
+OK: Service is healthy.
+Exit code: 0
+
+FAILED RETRY CASE
+Hello, Shashanka!
+Maximum attempts: 2
+Attempt 1: checking service...
+WARNING: Service is not ready.
+Attempt 2: checking service...
+WARNING: Service is not ready.
+CRITICAL: Service did not become healthy.
+Exit code: 1
