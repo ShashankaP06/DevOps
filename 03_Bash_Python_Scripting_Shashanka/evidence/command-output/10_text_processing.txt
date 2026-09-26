@@ -1,0 +1,2 @@
+﻿ERROR: Log file does not exist: data/application.log
+Exit code: 2
