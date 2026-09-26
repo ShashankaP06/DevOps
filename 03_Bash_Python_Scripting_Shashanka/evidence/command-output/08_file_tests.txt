@@ -1,0 +1,14 @@
+﻿REGULAR FILE CASE
+Inspecting path: bash/07_system_metrics.sh
+ERROR: Path does not exist.
+Exit code: 2
+
+DIRECTORY CASE
+Inspecting path: bash
+ERROR: Path does not exist.
+Exit code: 2
+
+MISSING PATH CASE
+Inspecting path: missing-file.txt
+ERROR: Path does not exist.
+Exit code: 2
