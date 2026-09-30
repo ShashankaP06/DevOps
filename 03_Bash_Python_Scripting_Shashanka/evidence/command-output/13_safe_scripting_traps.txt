@@ -1,0 +1,2 @@
+Temporary report has 2 lines.
+Cleanup will run automatically on exit.

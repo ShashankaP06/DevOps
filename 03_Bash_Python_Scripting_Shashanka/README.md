@@ -1,7 +1,7 @@
 # 03 — Bash & Python Scripting for Automation
 
 **Est. time:** 4 weeks @ 2-5 hrs/week
-**Status:** 🔲 Not started
+**Status:** ✅ Complete
 
 ## Why this matters for you
 
@@ -11,14 +11,14 @@ helpers, and small CLI tools — the glue that holds a DevOps pipeline together.
 
 ## Topics Checklist
 
-- [ ] Bash: variables, loops, conditionals, functions, exit codes
-- [ ] Bash: piping/redirection, `awk`, `sed`, `jq` for log/JSON processing
-- [ ] Writing idempotent, safe scripts (`set -euo pipefail`, trap/cleanup)
-- [ ] Python: virtualenvs, `requests`, `subprocess`, `argparse`
-- [ ] Python: writing a simple CLI tool (e.g. with `click` or `argparse`)
-- [ ] Interacting with REST APIs from a script (e.g. hitting a health-check
+- [x] Bash: variables, loops, conditionals, functions, exit codes
+- [x] Bash: piping/redirection, `awk`, `sed`, `jq` for log/JSON processing
+- [x] Writing idempotent, safe scripts (`set -euo pipefail`, trap/cleanup)
+- [x] Python: virtualenvs, HTTP clients, `subprocess`, `argparse`
+- [x] Python: writing a simple CLI tool with `argparse`
+- [x] Interacting with REST APIs from a script (e.g. hitting a health-check
       endpoint, calling the GitHub API)
-- [ ] Basic cron / scheduled task automation
+- [x] Basic cron / scheduled task automation
 
 ## Free Resources
 
@@ -37,3 +37,12 @@ Write a small **"server health checker"**:
 - Bonus: schedule the Bash script with `cron` and log output to a file.
 
 Save both scripts + a `NOTES.md` explaining what each does in this folder.
+
+## Completed work
+
+- 13 cumulative Bash lessons plus `bash/health_check.sh`
+- Python fundamentals, safe subprocess automation, REST API checker, and tests
+- Cron example, genuine command-output evidence, operational notes, and an
+  interview guide
+
+See [`NOTES.md`](./NOTES.md) for commands and industry use cases.

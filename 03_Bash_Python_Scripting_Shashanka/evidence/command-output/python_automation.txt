@@ -1,0 +1,8 @@
+INFO: Application: orders-api
+healthy_service=web
+healthy_service=worker
+git version 2.43.0
+INFO: HTTP status: 200
+endpoint=https://api.github.com
+json_fields=33
+current_user_url=https://api.github.com/user

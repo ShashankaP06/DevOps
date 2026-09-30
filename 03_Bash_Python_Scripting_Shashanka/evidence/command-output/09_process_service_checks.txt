@@ -1,0 +1,26 @@
+﻿RUNNING PROCESS CASE
+Process and service report
+--------------------------
+OK: Process 'bash' is running.
+PID(s): 298 404 3952 
+your 131072x1 screen size is bogus. expect trouble
+    298 bash               09:30:18
+INFO: No systemd service name supplied; skipping service check.
+Exit code: 0
+
+MISSING PROCESS CASE
+Process and service report
+--------------------------
+CRITICAL: Process 'no_such_proc' is not running.
+INFO: No systemd service name supplied; skipping service check.
+Exit code: 1
+
+ACTIVE SERVICE CASE
+Process and service report
+--------------------------
+OK: Process 'bash' is running.
+PID(s): 298 404 3971 
+your 131072x1 screen size is bogus. expect trouble
+    298 bash               09:30:19
+OK: Service 'systemd-journald' is active.
+Exit code: 0

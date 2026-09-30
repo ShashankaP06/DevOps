@@ -1,0 +1,3 @@
+# Run every five minutes and append both stdout and stderr to one log.
+# Install with: crontab cron/health-check.cron
+*/5 * * * * cd /path/to/03_Bash_Python_Scripting_Shashanka && ./bash/health_check.sh >> logs/cron.log 2>&1
