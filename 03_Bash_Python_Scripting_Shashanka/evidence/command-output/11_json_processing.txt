@@ -1,0 +1,5 @@
+Deployment: orders-api:1.4.0
+Environment: staging
+Healthy services:
+- web on port 8080
+- worker on port 9000
