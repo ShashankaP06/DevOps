@@ -1,7 +1,7 @@
 # 04 — Docker & Containers
 
 **Est. time:** 5-6 weeks @ 2-5 hrs/week
-**Status:** 🔲 Not started
+**Status:** 🟨 In progress
 
 ## Why this matters for you
 
@@ -11,12 +11,12 @@ modules in the whole roadmap.
 
 ## Topics Checklist
 
-- [ ] Images vs containers, the Docker daemon/client model
-- [ ] Writing a `Dockerfile` (layers, caching, multi-stage builds)
-- [ ] Running/stopping/inspecting containers, `docker logs`, `docker exec`
-- [ ] Volumes and bind mounts (persisting data)
-- [ ] Docker networking basics (bridge networks, exposing ports)
-- [ ] `docker-compose` for multi-container apps
+- [x] Images vs containers, the Docker daemon/client model
+- [ ] Writing a `Dockerfile` (layers, caching complete; multi-stage pending)
+- [x] Running/stopping/inspecting containers, `docker logs`, `docker exec`
+- [x] Volumes and bind mounts (persisting data)
+- [x] Docker networking basics (bridge networks, exposing ports)
+- [x] Docker Compose for multi-container apps
 - [ ] Image tagging, pushing to a registry (Docker Hub or AWS ECR)
 - [ ] Basic image security hygiene (small base images, not running as root,
       scanning with `docker scout` or `trivy`)
@@ -39,3 +39,15 @@ earlier module, or a tiny Flask/Node "hello world"):
 
 Put the app + Dockerfile + compose file + a `NOTES.md` explaining each step
 in this folder.
+
+## Capstone progress
+
+The DevOps Release Management Platform now runs as four healthy containers:
+
+- Nginx public gateway
+- Non-root FastAPI application
+- PostgreSQL persistent database
+- Redis persistent cache
+
+See [`NOTES.md`](./NOTES.md) and [`evidence/`](./evidence) for architecture,
+commands, troubleshooting, industry usage, and genuine execution results.

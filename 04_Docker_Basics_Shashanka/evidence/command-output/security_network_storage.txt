@@ -1,0 +1,5 @@
+uid=10001(appuser) gid=10001(appuser) groups=10001(appuser)
+DRIVER    VOLUME NAME
+local     04_docker_basics_shashanka_postgres_data
+local     04_docker_basics_shashanka_redis_data
+release-api release-cache release-database release-gateway
