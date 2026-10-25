@@ -17,9 +17,9 @@ pytest-is-not-installed
     i Base image was auto-detected. To get more accurate results, build images with max-mode provenance attestations.
       Review https://docs.docker.com/build/attestations/slsa-provenance/ for more information.
 
-  Target     │  release-api:0.3.0                                                                         │    0C     1H     6M    27L   
-    digest   │  53b57b2ad3a6                                                                              │                              
-  Base image │  oisupport/staging-amd64:2db4c7a267cda3c42b3825d3752f2bb543ed5dee1fd0bb46941b8fb93f0be932  │    0C     1H     6M    27L   
+  Target     │  release-api:0.3.0                                                                         │    0C     1H     6M    27L
+    digest   │  53b57b2ad3a6                                                                              │
+  Base image │  oisupport/staging-amd64:2db4c7a267cda3c42b3825d3752f2bb543ed5dee1fd0bb46941b8fb93f0be932  │    0C     1H     6M    27L
 
 What's next:
     View vulnerabilities → docker scout cves release-api:0.3.0
@@ -36,16 +36,16 @@ What's next:
 
 ## Overview
 
-                    │               Analyzed Image                
+                    │               Analyzed Image
 ────────────────────┼─────────────────────────────────────────────
-  Target            │  release-api:0.3.0                          
-    digest          │  53b57b2ad3a6                               
-    platform        │ linux/amd64                                 
-    provenance      │ https://github.com/ShashankaP06/DevOps.git  
-                    │  https://github.com/ShashankaP06/DevOps/blob/7ab935c39584d4b40a6cd57e1aafb4755fe4195a   
-    vulnerabilities │    0C     1H     0M     0L                  
-    size            │ 66 MB                                       
-    packages        │ 153                                         
+  Target            │  release-api:0.3.0
+    digest          │  53b57b2ad3a6
+    platform        │ linux/amd64
+    provenance      │ https://github.com/ShashankaP06/DevOps.git
+                    │  https://github.com/ShashankaP06/DevOps/blob/7ab935c39584d4b40a6cd57e1aafb4755fe4195a
+    vulnerabilities │    0C     1H     0M     0L
+    size            │ 66 MB
+    packages        │ 153
 
 
 ## Packages and Vulnerabilities
@@ -55,16 +55,16 @@ pkg:deb/debian/zlib@1%3A1.3.dfsg%2Breally1.3.1-1?os_distro=trixie&os_name=debian
 
     ✗ HIGH CVE-2026-85091
       https://scout.docker.com/v/CVE-2026-85091?s=debian&n=zlib&ns=debian&t=deb&osn=debian&osv=13&vr=%3E0
-      Affected range : >0         
-      Fixed version  : not fixed  
-    
+      Affected range : >0
+      Fixed version  : not fixed
+
 
 
 1 vulnerability found in 1 package
-  CRITICAL  0  
-  HIGH      1  
-  MEDIUM    0  
-  LOW       0  
+  CRITICAL  0
+  HIGH      1
+  MEDIUM    0
+  LOW       0
 
 
 What's next:
