@@ -45,6 +45,14 @@ docker compose ps
 docker compose logs api
 docker compose exec cache redis-cli ping
 docker compose down
+
+docker build --target test -t release-api:test .
+docker run --rm release-api:test
+docker build --target production -t release-api:0.3.0 .
+docker scout quickview release-api:0.3.0
+docker scout cves --only-severity critical,high release-api:0.3.0
+docker sbom release-api:0.3.0 --format spdx-json
+docker tag release-api:0.3.0 ghcr.io/shashankap06/release-api:0.3.0
 ```
 
 ## Concepts demonstrated
@@ -58,6 +66,9 @@ docker compose down
 - `depends_on` with health conditions controls startup order.
 - Running is not the same as ready; health checks test application behaviour.
 - Nginx provides one public entry point while internal services stay private.
+- Multi-stage builds isolate builder, test, runtime, and production concerns.
+- Version tags identify immutable releases while `latest` is a moving reference.
+- An SBOM inventories packages for vulnerability and license investigations.
 
 ## Troubleshooting evidence
 
@@ -74,12 +85,21 @@ using `docker inspect` and service logs.
 - `.dockerignore` reduces context and avoids unnecessary files.
 - `.env` is ignored by Git.
 - PostgreSQL, Redis, and the API have no host-published ports.
+- The production image excludes pytest and test source files.
 - The local password is only for development; production secrets belong in a
   secret manager.
 
-## Remaining Module 04 work
+## Vulnerability decision
 
-- Multi-stage image optimization.
-- Image inspection, tagging, SBOM, and vulnerability scanning.
-- Registry publishing workflow.
-- Final evidence, interview guide, and module completion PR.
+Docker Scout reported zero critical vulnerabilities and one high-severity
+finding in Debian's `zlib` package (`CVE-2026-85091`). No fixed package or
+recommended replacement base tag was available at scan time. The finding is
+documented as an upstream risk. The image should be rebuilt and rescanned when
+an updated base image becomes available.
+
+## Registry handoff
+
+The production image is tagged as
+`ghcr.io/shashankap06/release-api:0.3.0` and `latest`. Module 05 will securely
+publish these tags from GitHub Actions using its short-lived repository token,
+matching the same workflow used with AWS ECR and CI service credentials.
