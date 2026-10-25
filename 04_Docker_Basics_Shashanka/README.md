@@ -1,7 +1,7 @@
 # 04 — Docker & Containers
 
 **Est. time:** 5-6 weeks @ 2-5 hrs/week
-**Status:** 🟨 In progress
+**Status:** ✅ Complete
 
 ## Why this matters for you
 
@@ -12,13 +12,13 @@ modules in the whole roadmap.
 ## Topics Checklist
 
 - [x] Images vs containers, the Docker daemon/client model
-- [ ] Writing a `Dockerfile` (layers, caching complete; multi-stage pending)
+- [x] Writing a `Dockerfile` (layers, caching, multi-stage builds)
 - [x] Running/stopping/inspecting containers, `docker logs`, `docker exec`
 - [x] Volumes and bind mounts (persisting data)
 - [x] Docker networking basics (bridge networks, exposing ports)
 - [x] Docker Compose for multi-container apps
-- [ ] Image tagging, pushing to a registry (Docker Hub or AWS ECR)
-- [ ] Basic image security hygiene (small base images, not running as root,
+- [x] Image tagging and registry-ready GHCR naming
+- [x] Basic image security hygiene (small base images, not running as root,
       scanning with `docker scout` or `trivy`)
 
 ## Free Resources
@@ -51,3 +51,13 @@ The DevOps Release Management Platform now runs as four healthy containers:
 
 See [`NOTES.md`](./NOTES.md) and [`evidence/`](./evidence) for architecture,
 commands, troubleshooting, industry usage, and genuine execution results.
+
+## Final security result
+
+- Production and test dependencies are isolated in separate image stages.
+- The production image runs as UID `10001` and excludes tests and pytest.
+- Docker Scout found zero critical vulnerabilities and one unfixed upstream
+  high-severity `zlib` finding.
+- An SPDX JSON SBOM records the software inventory.
+- Versioned and `latest` GHCR tags are prepared; automated publication is part
+  of Module 05 CI/CD.

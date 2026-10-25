@@ -1,22 +1,49 @@
-FROM python:3.12-slim
+FROM python:3.12-slim AS builder
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+WORKDIR /build
+
+COPY requirements.txt .
+RUN python -m venv /opt/venv \
+    && /opt/venv/bin/pip install --no-cache-dir -r requirements.txt
+
+
+FROM python:3.12-slim AS runtime
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
-    PYTHONPATH=/app
+    PYTHONPATH=/app \
+    PATH="/opt/venv/bin:$PATH"
 
 WORKDIR /app
-
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
 
 RUN useradd --create-home --uid 10001 appuser \
     && chown appuser:appuser /app
 
+COPY --from=builder /opt/venv /opt/venv
 COPY --chown=appuser:appuser app ./app
-COPY --chown=appuser:appuser tests ./tests
 
 USER appuser
 
 EXPOSE 8000
 
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+
+FROM runtime AS test
+
+USER root
+
+COPY requirements.txt requirements-dev.txt ./
+RUN pip install --no-cache-dir -r requirements-dev.txt
+
+COPY --chown=appuser:appuser tests ./tests
+
+USER appuser
+
+CMD ["pytest", "-v"]
+
+
+FROM runtime AS production
