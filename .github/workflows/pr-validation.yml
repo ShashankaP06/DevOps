@@ -1,0 +1,54 @@
+name: Pull request validation
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "04_Docker_Basics_Shashanka/**"
+      - ".github/workflows/pr-validation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr-validation-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Lint, test, and validate Compose
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: 04_Docker_Basics_Shashanka
+    env:
+      POSTGRES_DB: releases
+      POSTGRES_USER: release_user
+      POSTGRES_PASSWORD: ci_only_password
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate Docker Compose
+        run: docker compose config --quiet
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build test image
+        uses: docker/build-push-action@v6
+        with:
+          context: 04_Docker_Basics_Shashanka
+          target: test
+          load: true
+          tags: release-api:test
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Lint Python
+        run: docker run --rm release-api:test ruff check app tests
+
+      - name: Run tests
+        run: docker run --rm release-api:test pytest -v

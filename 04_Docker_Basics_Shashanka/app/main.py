@@ -3,7 +3,9 @@ from typing import Any
 
 from fastapi import FastAPI, HTTPException, status
 from fastapi.responses import JSONResponse
+from psycopg import Error as PsycopgError
 from psycopg.errors import ForeignKeyViolation, UniqueViolation
+from redis.exceptions import RedisError
 
 from app import cache, database
 from app.models import ReleaseCreate, ServiceCreate
@@ -34,7 +36,7 @@ def health() -> JSONResponse:
     try:
         database_status = database.check_database()
         cache_status = cache.check_cache()
-    except Exception:
+    except (PsycopgError, RedisError, RuntimeError):
         return JSONResponse(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
             content={"status": "unhealthy", "dependency": "disconnected"},
