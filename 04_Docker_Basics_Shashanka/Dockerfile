@@ -24,6 +24,7 @@ RUN useradd --create-home --uid 10001 appuser \
 
 COPY --from=builder /opt/venv /opt/venv
 COPY --chown=appuser:appuser app ./app
+RUN find /app/app -type f -exec chmod a-x {} +
 
 USER appuser
 
@@ -40,6 +41,7 @@ COPY requirements.txt requirements-dev.txt ./
 RUN pip install --no-cache-dir -r requirements-dev.txt
 
 COPY --chown=appuser:appuser tests ./tests
+RUN find /app/tests -type f -exec chmod a-x {} +
 
 USER appuser
 
